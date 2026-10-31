@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#173f35" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta
+      name="description"
+      content="Bản đồ không gian xanh, sông rạch và điểm ô nhiễm ở TP.HCM, với số liệu và nguồn cho từng địa điểm."
+    />
+    <title>Bản đồ môi trường TP.HCM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="map" data-i18n-aria-label="mapLabel"></div>
+
+    <div class="dock">
+      <div class="finder">
+        <div class="brand">
+          <h1 data-i18n="appTitle"></h1>
+          <nav data-i18n-aria-label="infoNav">
+            <button type="button" id="btn-overview" data-i18n="overview"></button>
+            <button type="button" id="btn-sources" data-i18n="dataSources"></button>
+          </nav>
+        </div>
+        <div class="search">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <circle cx="11" cy="11" r="7" />
+            <path d="M20 20l-4-4" />
+          </svg>
+          <input
+            id="search"
+            type="search"
+            role="combobox"
+            data-i18n-aria-label="searchLabel"
+            aria-controls="search-results"
+            aria-expanded="false"
+            aria-autocomplete="list"
+            autocomplete="off"
+            data-i18n-placeholder="searchPlaceholder"
+          />
+          <ul id="search-results" role="listbox" data-i18n-aria-label="searchResults" hidden></ul>
+        </div>
+      </div>
+
+      <div id="layers" class="layers" role="group" data-i18n-aria-label="layersLabel"></div>
+    </div>
+
+    <aside id="panel" class="panel" aria-labelledby="panel-title" tabindex="-1" hidden></aside>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

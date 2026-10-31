@@ -1,0 +1,6 @@
+dist
+data
+public
+package-lock.json
+CLAUDE.md
+*.md
