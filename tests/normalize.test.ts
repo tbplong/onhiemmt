@@ -66,6 +66,10 @@ describe('real dataset', () => {
     expect(PLANNED_PLACE_NAMES.filter((n) => !names.has(n))).toEqual([]);
   });
 
+  it('flags the five whole-district rows', () => {
+    expect(places.filter((p) => p.isDistrict)).toHaveLength(5);
+  });
+
   it('flood points show flood fields and no empty air placeholders', () => {
     for (const flood of places.filter((p) => p.issueType === 'Ngập')) {
       const groups = getFieldGroups(flood);

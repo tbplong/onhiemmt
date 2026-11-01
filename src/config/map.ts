@@ -119,16 +119,16 @@ export const PANEL_WIDTH = { default: 420, min: 360, wide: 760, wideRatio: 0.6, 
  * `status` column when the data gets one (tests check every name still exists in the CSV).
  */
 export const PLANNED_PLACE_NAMES: readonly string[] = [
-  'Công viên dự kiến ở Thạnh Xuân – Thới An (Quận 12)',
-  'Dự án Sài Gòn Safari (Củ Chi)',
-  'Dự án công viên 120 ha (Quận 7)',
-  'Vinhomes Sài Gòn Park (phía Tây Bắc)',
-  'Công viên thể dục thể thao phường 12 (Bình Thạnh)',
-  'Đường vượt biển Cần Giờ – Vũng Tàu (dự án)',
+  'Công viên dự kiến ở Thạnh Xuân – Thới An',
+  'Dự án Sài Gòn Safari',
+  'Dự án công viên 120 ha',
+  'Vinhomes Sài Gòn Park',
+  'Công viên thể dục thể thao phường 12',
+  'Đường vượt biển Cần Giờ – Vũng Tàu',
 ];
 
-/** Rows describing a whole district rather than one place. */
-export const DISTRICT_NAME_RE = /^Quận |\(quận cũ\)/;
+/** Rows describing a whole district rather than one place ("Quận 3: …", "Thủ Đức: …"). */
+export const DISTRICT_NAME_RE = /^(Quận [^:]+|Thủ Đức): /;
 
 export const COORD_CONFIDENCE: Record<string, 'verified' | 'representative' | 'estimated'> = {
   'OpenStreetMap (Nominatim)': 'verified',
