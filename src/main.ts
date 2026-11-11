@@ -46,7 +46,7 @@ function applyStrings() {
   for (const el of document.querySelectorAll<HTMLElement>('[data-i18n]')) {
     el.textContent = vi[el.dataset.i18n as TextKey];
   }
-  for (const attr of ['placeholder', 'aria-label']) {
+  for (const attr of ['placeholder', 'aria-label', 'alt']) {
     for (const el of document.querySelectorAll<HTMLElement>(`[data-i18n-${attr}]`)) {
       el.setAttribute(attr, vi[el.getAttribute(`data-i18n-${attr}`) as TextKey]);
     }

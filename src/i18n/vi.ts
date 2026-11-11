@@ -1,6 +1,7 @@
 // Every user-facing string lives here.
 export const vi = {
   appTitle: 'Bản đồ môi trường TP.HCM',
+  logoAlt: 'Logo Trường THPT Nguyễn Thị Minh Khai',
   searchPlaceholder: 'Tìm công viên, kênh rạch, điểm ô nhiễm…',
   searchLabel: 'Tìm địa điểm trên bản đồ',
   searchResults: 'Kết quả tìm kiếm',
